@@ -29,4 +29,16 @@ public class TesteLivro extends TestCase {
 	String testNome = l2.getPessoa().getNome();
 	assertEquals("Presley", testNome);
 	}
+	
+	public void testToString() {
+		Livro l2 = new Livro("Guerra e Paz");
+		Pessoa p2 = new Pessoa();
+		p2.setNome("Elvis");
+		
+		assertEquals("Guerra e Paz por Autor desconhecido; Disponível.", l2.toString()); 
+		
+		l2.setPessoa(p2);
+		
+		assertEquals("Guerra e Paz por Autor desconhecido; Emprestado para Elvis", l2.toString());
+	}
 }

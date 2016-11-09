@@ -1,3 +1,13 @@
-ArrayList<String> Lista = new ArrayList<String>(String);
-Lista.add("Teste1");
-Lista.add("Teste2");
+long x = 1;
+
+try {
+	x = 1/0;	
+}
+catch (Exception e){
+	x=0;
+	e.printStackTrace();
+	System.out.println("PASSOU PELO CATCH");
+}
+finally{
+	System.out.println("PASSOU POR TUDO");	
+}

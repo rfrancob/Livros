@@ -28,5 +28,16 @@ public class Livro {
 
 	public Pessoa getPessoa() {
 		return this.pessoa;
-	}	
+	}
+	
+	public String toString() {
+		String disponivel;
+		if(this.getPessoa() == null){
+			disponivel = "Disponível.";
+		}
+		else{
+			disponivel = "Emprestado para " + this.getPessoa().getNome();
+		}
+		return this.getTitulo() + " por " + this.getAutor() + "; " + disponivel;
+	}
 }
